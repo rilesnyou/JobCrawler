@@ -16,7 +16,10 @@ public class app {
 		Elements temp = doc.select("h2.title");
 		Elements link = doc.select("h2.title > a");
 		String url = link.attr("href");
+		// String name = link.attr("title");
 		int i=0;
+		// page<=is for however many page there may be on given website
+		for(int page=1; page<=10; page++) {
 		for(Element resultsBody:temp)
 		{
 			i++;
@@ -25,9 +28,12 @@ public class app {
 			// Elements s = resultsBody.getElementsByTag("a");
 			// System.out.println(s);
 		}
+		
+		}
 	} catch (IOException e) {
 		e.printStackTrace();
 	}
+	
 	}
 
 }
